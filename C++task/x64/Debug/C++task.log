@@ -1,0 +1,10 @@
+﻿  源.cpp
+D:\Giverson\Desktop\GIT\C++\C++task\源.cpp(1,1): warning C4828: 文件包含在偏移 0x3ebf 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+D:\Giverson\Desktop\GIT\C++\C++task\源.cpp(534,17): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\Giverson\Desktop\GIT\C++\C++task\源.cpp(535,17): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\Giverson\Desktop\GIT\C++\C++task\源.cpp(597,16): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\Giverson\Desktop\GIT\C++\C++task\源.cpp(598,16): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\Giverson\Desktop\GIT\C++\C++task\源.cpp(668,6): warning C4101: “m”: 未引用的局部变量
+D:\Giverson\Desktop\GIT\C++\C++task\源.cpp(625): warning C4715: “indexOf”: 不是所有的控件路径都返回值
+D:\Giverson\Desktop\GIT\C++\C++task\源.cpp(562): warning C4715: “indexof”: 不是所有的控件路径都返回值
+  C++task.vcxproj -> D:\Giverson\Desktop\GIT\C++\C++task\x64\Debug\C++task.exe

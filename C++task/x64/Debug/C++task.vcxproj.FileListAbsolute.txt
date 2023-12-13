@@ -1,0 +1,2 @@
+D:\Coding\VS2022\C++task\x64\Debug\C++task.exe
+D:\Giverson\Desktop\GIT\C++\C++task\x64\Debug\C++task.exe
