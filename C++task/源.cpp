@@ -6,6 +6,7 @@
 #include<iostream>
 #include "mytemperature.h"
 #include "stdio.h"
+#include "student.h"
 #define pi0 3.1415926
 using namespace std;
 std::pair<int, int> gcd_lcm(int a, int b);
@@ -20,6 +21,23 @@ int* f();
 int indexof(const char* s1, const char* s2);
 int parseHex(const char* const hexString);
 void bubbleSort(int list[], int size);
+class Time             // 定义Time类
+{
+private:              // 数据成员为公用的
+	int hour;
+	int minute;
+	int sec;
+
+public:
+	void setTime(int h, int m, int s) {
+		hour = h;
+		minute = m;
+		sec=s;
+	}
+	void displayTime() {
+		cout << hour << "：" << minute << "：" << sec << endl;
+	}
+};
 int main()
 {
 	//实验一第一题
@@ -108,7 +126,7 @@ int main()
 	//	return 0;
 	//}
 	//cout << "y的值是：" << y;
-	
+
 	//实验二第三题
 	//double a, b, c;
 	//double l;
@@ -165,7 +183,7 @@ int main()
 	//	cout << "Error！请输入正确运算符。";
 	//	break;
 	//}
-	
+
 	//实验二第五题
 //	string s;
 //	while (getline(cin, s))
@@ -233,7 +251,7 @@ int main()
 	//	if(i<5)cout << "\n";
 	//	
 	//}
-	
+
 	//实验二第八题
 	//double a, x0, x, epson;
 	//cout << "请输入a的值：";
@@ -255,7 +273,7 @@ int main()
 	//cout << "平方根为：" << x << endl;
 
 
-	
+
 	//实验二第九题
 	//double price = 0.8;
 	//int num = 2;
@@ -394,7 +412,7 @@ int main()
 	//		cout << i+1;
 	//	}
 	//}
-	
+
 	//实验四数组第四题
 	//int size1, size2, size3;
 	//cout << "Enter list1: ";
@@ -475,33 +493,89 @@ int main()
 	//cin.getline(s, size);
 	//cout << "Tne number " << s << " in hexChar is " << parseHex(s) << " in decimal\n";
 
-	//实验四程序设计第四题
-	int size=0;
-	cout << "请输入元素个数:";
-	cin >> size;
-	int* list = new int[size];
-	int* p = list;
-	cout << "请输入数组元素:";
-	for (int i = 0; i < size; i++, p++) {
-		cin >> *p;  //利用指针读取数据   
-		cout << "指针指向的地址：" << p;
-		cout << "\t指针指向的元素：" << *p << endl;
-	}
-	bubbleSort(list, size);
-	cout << "The list is : ";
-	p = list;
-	for (int a = 0; a < size; a++,p++)
-		cout << *p << "  ";
-	cout << endl;
-	p = list;
-	for (int i = 0; i < size; i++, p++) {
-		cout << "指针指向的地址：" << p;
-		cout << "\t指针指向的元素：" << *p << endl;
-	}
-	delete [] list;
-	return 0;
-	}
-	void bubbleSort(int list[], int size) {
+//	//实验四程序设计第四题
+//	int size=0;
+//	cout << "请输入元素个数:";
+//	cin >> size;
+//	int* list = new int[size];
+//	int* p = list;
+//	cout << "请输入数组元素:";
+//	for (int i = 0; i < size; i++, p++) {
+//		cin >> *p;  //利用指针读取数据   
+//		cout << "指针指向的地址：" << p;
+//		cout << "\t指针指向的元素：" << *p << endl;
+//	}
+//	bubbleSort(list, size);
+//	cout << "The list is : ";
+//	p = list;
+//	for (int a = 0; a < size; a++,p++)
+//		cout << *p << "  ";
+//	cout << endl;
+//	p = list;
+//	for (int i = 0; i < size; i++, p++) {
+//		cout << "指针指向的地址：" << p;
+//		cout << "\t指针指向的元素：" << *p << endl;
+//	}
+//	delete [] list;
+// 
+// 
+// 
+
+//实验五第一题
+
+//Time t1;           //定义t1为Time类对象
+//int h, m, s;
+//
+//cout << "请输入设定的时间" << endl;
+//cin >> h >> m >> s;      //输入设定的时间 
+//t1.setTime(h, m, s);
+//t1.displayTime();
+
+//实验五第二题
+//Student stud;                //定义对象
+//stud.set_value(007, "tcg", 'm');
+//stud.display();              //执行stud对象的display函数
+
+//实验五第三题
+//Cuboid c1;
+//Cuboid c2;
+//Cuboid c3;
+//
+//c1.set_value();
+//c2.set_value();
+//c3.set_value();
+//c1.display();
+//c2.display();
+//c3.display();
+
+//实验五第四题
+//Scoretable a[5];
+//for (int i = 0; i < 5; i++)
+//{
+//	a[i].set_value();
+//}
+//a->max(a, 5);
+
+
+//实验五第五题
+Point a(60,80);
+a.setPoint(3, 4);
+a.display();
+
+return 0;
+}
+
+
+
+
+//实验五第六题
+//实验五第七题
+
+//函数、类实现
+
+
+
+void bubbleSort(int list[], int size) {
 		int temp;
 		for (int m = 0; m < size - 1; m++)
 			for (int b = 0; b < size - 1; b++)
@@ -712,10 +786,3 @@ std::pair<int, int> gcd_lcm(int a, int b) {
 
 
 
-//实验五第一题
-//实验五第二题
-//实验五第三题
-//实验五第四题
-//实验五第五题
-//实验五第六题
-//实验五第七题
